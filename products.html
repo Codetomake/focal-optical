@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bombay Opticians Products - Premium eyeglasses, sunglasses, contact lenses, and lens brands in Kumaon">
+    <meta name="keywords" content="eyeglasses, contact lenses, sunglasses, lens brands, frames, Kumaon">
+    <meta name="author" content="Bombay Opticians">
+    <title>Products & Services | Bombay Opticians</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #001F3F;
+            --primary-orange: #FF6B35;
+            --text-dark: #1a1a1a;
+            --text-light: #4a4a4a;
+            --bg-light: #f8f8f8;
+            --bg-white: #ffffff;
+            --border-light: #e0e0e0;
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============ HEADER & NAV ============ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-text span:first-child {
+            color: var(--primary-dark);
+        }
+
+        .logo-text span:last-child {
+            color: var(--primary-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e55a28;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            margin-top: 70px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #003d5c 100%);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 5vw, 44px);
+            line-height: 1.1;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 10px 0;
+            font-weight: 300;
+        }
+
+        /* ============ SECTION HEADERS ============ */
+        .section {
+            padding: 60px 20px;
+        }
+
+        .section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ============ PRODUCT CATEGORY ============ */
+        .product-category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--primary-orange);
+            border-radius: 2px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .product-item {
+            background: white;
+            padding: 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-item:hover {
+            border-color: var(--primary-orange);
+            background: var(--bg-light);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .product-item::before {
+            content: '✓ ';
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+
+        /* ============ FRAME GUIDE ============ */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .guide-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .guide-card:hover {
+            border-color: var(--primary-orange);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .guide-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .guide-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .guide-desc {
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ============ FEATURES ============ */
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .feature-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ============ BRAND SHOWCASE ============ */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .brand-card {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 2px solid var(--border-light);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            transition: all 0.3s ease;
+        }
+
+        .brand-card:hover {
+            border-color: var(--primary-orange);
+            color: var(--primary-orange);
+            background: var(--bg-light);
+            transform: scale(1.05);
+        }
+
+        /* ============ TESTIMONIALS ============ */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--primary-orange);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-stars {
+            color: var(--primary-orange);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* ============ CTA BOX ============ */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-dark), #003d5c);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .cta-box p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-box-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .btn-light:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-orange);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============ STICKY CTA ============ */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap-reverse;
+            justify-content: flex-end;
+        }
+
+        .cta-button {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        .cta-whatsapp {
+            background: #25D366;
+        }
+
+        .cta-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-phone {
+            background: var(--primary-orange);
+        }
+
+        .cta-phone:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .product-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                margin-top: 70px;
+                padding: 30px 15px;
+            }
+
+            .section {
+                padding: 40px 15px;
+            }
+
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+
+            .category-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; gap: 8px;">
+                    <span class="logo-text"><span>Bombay</span><span>Opticians</span></span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="tel:9548877871" class="btn btn-secondary">📞 Call</a>
+                <a href="https://wa.me/919548877871" class="btn btn-primary" target="_blank">💬 WhatsApp</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Our Complete Product Range</h1>
+        <p class="hero-subtitle">Premium eyewear solutions for every lifestyle and visual need</p>
+    </section>
+
+    <!-- EYEGLASSES SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">👓 Eyeglasses & Frames</h2>
+                <p class="section-subtitle">From everyday wear to premium designer frames, we have the perfect style for you</p>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Daily Wear Eyeglasses</h3>
+                <div class="product-list">
+                    <div class="product-item">Single Vision</div>
+                    <div class="product-item">Classic Styles</div>
+                    <div class="product-item">Modern Frames</div>
+                    <div class="product-item">Budget Friendly</div>
+                    <div class="product-item">Durable Materials</div>
+                    <div class="product-item">Lightweight</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Specialized Eyewear</h3>
+                <div class="product-list">
+                    <div class="product-item">Office Wear</div>
+                    <div class="product-item">Computer Glasses</div>
+                    <div class="product-item">Reading Glasses</div>
+                    <div class="product-item">Gaming Glasses</div>
+                    <div class="product-item">Progressive</div>
+                    <div class="product-item">Bifocal</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Frame Styles</h3>
+                <div class="product-list">
+                    <div class="product-item">Full Rim</div>
+                    <div class="product-item">Semi Rimless</div>
+                    <div class="product-item">Rimless</div>
+                    <div class="product-item">Cat Eye</div>
+                    <div class="product-item">Aviator</div>
+                    <div class="product-item">Browline</div>
+                    <div class="product-item">Round</div>
+                    <div class="product-item">Square</div>
+                    <div class="product-item">Rectangle</div>
+                    <div class="product-item">Geometric</div>
+                    <div class="product-item">Oversized</div>
+                    <div class="product-item">Wire Frames</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Frame Materials</h3>
+                <div class="product-list">
+                    <div class="product-item">Titanium</div>
+                    <div class="product-item">Acetate</div>
+                    <div class="product-item">TR90 (Flexible)</div>
+                    <div class="product-item">Metal</div>
+                    <div class="product-item">Stainless Steel</div>
+                    <div class="product-item">Spring Hinges</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Special Collections</h3>
+                <div class="product-list">
+                    <div class="product-item">Kids Frames</div>
+                    <div class="product-item">Teen Styles</div>
+                    <div class="product-item">Designer Frames</div>
+                    <div class="product-item">Fashion Forward</div>
+                    <div class="product-item">Sports Frames</div>
+                    <div class="product-item">Premium Luxury</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUNGLASSES SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">😎 Sunglasses & UV Protection</h2>
+                <p class="section-subtitle">Protect your eyes with style using our premium sunglasses collection</p>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Lens Types</h3>
+                <div class="product-list">
+                    <div class="product-item">Polarized Lenses</div>
+                    <div class="product-item">UV400 Protection</div>
+                    <div class="product-item">Gradient Lenses</div>
+                    <div class="product-item">Mirrored Lenses</div>
+                    <div class="product-item">Flash Lenses</div>
+                    <div class="product-item">Photochromic</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Lifestyle Categories</h3>
+                <div class="product-list">
+                    <div class="product-item">Driving Sunglasses</div>
+                    <div class="product-item">Sports Sunglasses</div>
+                    <div class="product-item">Fashion Sunglasses</div>
+                    <div class="product-item">Prescription Sunglasses</div>
+                    <div class="product-item">Oversized</div>
+                    <div class="product-item">Aviator</div>
+                    <div class="product-item">Wayfarer</div>
+                    <div class="product-item">Cat Eye</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Popular Brands</h3>
+                <div class="product-list">
+                    <div class="product-item">Ray-Ban</div>
+                    <div class="product-item">Oakley</div>
+                    <div class="product-item">Carrera</div>
+                    <div class="product-item">Police</div>
+                    <div class="product-item">Titan</div>
+                    <div class="product-item">Fastrack</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT LENSES SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">👁️ Contact Lenses</h2>
+                <p class="section-subtitle">Premium contact lenses for comfort, style, and vision correction</p>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Wear Schedule</h3>
+                <div class="product-list">
+                    <div class="product-item">Daily Disposable</div>
+                    <div class="product-item">Weekly Lenses</div>
+                    <div class="product-item">Monthly Lenses</div>
+                    <div class="product-item">Yearly Lenses</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Lens Types</h3>
+                <div class="product-list">
+                    <div class="product-item">Single Vision</div>
+                    <div class="product-item">Multifocal</div>
+                    <div class="product-item">Toric (Astigmatism)</div>
+                    <div class="product-item">Color Lenses</div>
+                    <div class="product-item">Silicone Hydrogel</div>
+                    <div class="product-item">RGP (Rigid Gas Permeable)</div>
+                    <div class="product-item">Scleral Lenses</div>
+                    <div class="product-item">Hybrid Lenses</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Top Brands</h3>
+                <div class="product-list">
+                    <div class="product-item">Johnson & Johnson</div>
+                    <div class="product-item">Acuvue</div>
+                    <div class="product-item">Bausch + Lomb</div>
+                    <div class="product-item">Alcon</div>
+                    <div class="product-item">CooperVision</div>
+                    <div class="product-item">FreshLook</div>
+                    <div class="product-item">Biofinity</div>
+                    <div class="product-item">Air Optix</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Lens Solutions & Care</h3>
+                <div class="product-list">
+                    <div class="product-item">Solution Bottles</div>
+                    <div class="product-item">Lens Cases</div>
+                    <div class="product-item">Rewetting Drops</div>
+                    <div class="product-item">Enzyme Cleaners</div>
+                    <div class="product-item">Storage Solutions</div>
+                    <div class="product-item">Travel Kits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM LENSES SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">💎 Premium Lens Options</h2>
+                <p class="section-subtitle">Advanced lens technology for optimal vision and eye health</p>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Lens Types</h3>
+                <div class="product-list">
+                    <div class="product-item">Single Vision</div>
+                    <div class="product-item">Progressive</div>
+                    <div class="product-item">Bifocal</div>
+                    <div class="product-item">Trifocal</div>
+                    <div class="product-item">Office Lenses</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Special Coatings</h3>
+                <div class="product-list">
+                    <div class="product-item">Anti-Reflective</div>
+                    <div class="product-item">Scratch Resistant</div>
+                    <div class="product-item">UV Protection</div>
+                    <div class="product-item">Blue Light Filter</div>
+                    <div class="product-item">Anti-Glare</div>
+                    <div class="product-item">Hydrophobic</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">Advanced Features</h3>
+                <div class="product-list">
+                    <div class="product-item">Photochromic</div>
+                    <div class="product-item">Transitions®</div>
+                    <div class="product-item">High Index</div>
+                    <div class="product-item">Ultra Thin</div>
+                    <div class="product-item">Computer Lens</div>
+                    <div class="product-item">Polarized</div>
+                </div>
+            </div>
+
+            <div class="product-category">
+                <h3 class="category-title">International Brands</h3>
+                <div class="product-list">
+                    <div class="product-item">Essilor</div>
+                    <div class="product-item">Zeiss</div>
+                    <div class="product-item">Hoya</div>
+                    <div class="product-item">Kodak</div>
+                    <div class="product-item">Rodenstock</div>
+                    <div class="product-item">Nikon Lenswear</div>
+                    <div class="product-item">Shamir</div>
+                    <div class="product-item">Crizal</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAME GUIDE SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🎨 Frame Guide & Shapes</h2>
+                <p class="section-subtitle">Find the perfect frame shape that suits your face and personality</p>
+            </div>
+
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">■</div>
+                    <div class="guide-title">Rectangle</div>
+                    <div class="guide-desc">Flattering for round and oval faces, adds definition and structure</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">⬜</div>
+                    <div class="guide-title">Square</div>
+                    <div class="guide-desc">Perfect for round faces, provides bold and strong appearance</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">⭕</div>
+                    <div class="guide-title">Round</div>
+                    <div class="guide-desc">Best for angular faces, softens sharp features with curves</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">◈</div>
+                    <div class="guide-title">Cat Eye</div>
+                    <div class="guide-desc">Retro-chic style, flatters most face shapes with vintage charm</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">✈️</div>
+                    <div class="guide-title">Aviator</div>
+                    <div class="guide-desc">Timeless classic, suits oval and round face shapes perfectly</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">~</div>
+                    <div class="guide-title">Browline</div>
+                    <div class="guide-desc">Versatile and trendy, works well for square and oval faces</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">◆</div>
+                    <div class="guide-title">Geometric</div>
+                    <div class="guide-desc">Modern and bold, creates a statement for fashion-forward wearers</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">⬟</div>
+                    <div class="guide-title">Oversized</div>
+                    <div class="guide-desc">Dramatic and glamorous, flatters most face types with coverage</div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">⬚</div>
+                    <div class="guide-title">Wire Frame</div>
+                    <div class="guide-desc">Minimalist and timeless, creates delicate and refined look</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY THESE BRANDS SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why We Stock These Brands</h2>
+                <p class="section-subtitle">We partner with the world's leading optical brands for quality and reliability</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🔬</div>
+                    <div class="feature-name">Advanced Technology</div>
+                    <div class="feature-desc">Latest innovations in lens design and manufacturing</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-name">Certified Quality</div>
+                    <div class="feature-desc">International standards and certifications</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-name">Warranty Coverage</div>
+                    <div class="feature-desc">Comprehensive warranty and after-sales support</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">💪</div>
+                    <div class="feature-name">Durability</div>
+                    <div class="feature-desc">Long-lasting materials and superior construction</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">👁️</div>
+                    <div class="feature-name">Eye Health</div>
+                    <div class="feature-desc">Prioritizes visual comfort and eye protection</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-name">Global Recognition</div>
+                    <div class="feature-desc">Trusted by millions worldwide</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Customer Reviews</h2>
+                <p class="section-subtitle">Real experiences from customers who found their perfect eyewear</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Found the perfect frames! The staff was so helpful in guiding me through all the options."</div>
+                    <div class="testimonial-author">— Anita Patel</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"The 20-step eye examination is thorough. Best eye test I've ever had. Highly recommended!"</div>
+                    <div class="testimonial-author">— Rajesh Kumar</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Great selection of brands and affordable prices. Been coming here for 5 years!"</div>
+                    <div class="testimonial-author">— Priya Sharma</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Fast delivery through WhatsApp ordering. Quality is exactly as promised."</div>
+                    <div class="testimonial-author">— Vikram Singh</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Genuine products at fair prices. This place is honest unlike others!"</div>
+                    <div class="testimonial-author">— Neha Gupta</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Perfect prescription and amazing frame choices. Will definitely recommend!"</div>
+                    <div class="testimonial-author">— Arun Dubey</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BOX -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h3>Ready to Find Your Perfect Eyewear?</h3>
+                <p>Book your comprehensive 20-step eye examination today or order online through WhatsApp</p>
+                <div class="cta-box-buttons">
+                    <a href="tel:9548877871" class="btn btn-light">⭐ Book Eye Test</a>
+                    <a href="https://wa.me/919548877871?text=I%20would%20like%20to%20order%20eyeglasses" class="btn btn-light" target="_blank">💬 Order on WhatsApp</a>
+                    <a href="index.html#contact" class="btn btn-light">📍 Visit Store</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html">Eyeglasses</a></li>
+                        <li><a href="products.html">Sunglasses</a></li>
+                        <li><a href="products.html">Contact Lenses</a></li>
+                        <li><a href="products.html">Premium Lenses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html">Eye Testing</a></li>
+                        <li><a href="index.html">Frame Fitting</a></li>
+                        <li><a href="index.html">Lens Measurement</a></li>
+                        <li><a href="index.html">Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/919548877871" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/thebombayopticians" target="_blank">Instagram</a></li>
+                        <li><a href="https://g.page/r/CXBZTz5n_YvbEBM/review" target="_blank">Google Reviews</a></li>
+                        <li><a href="tel:9548877871">Call Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bombay Opticians™. All Rights Reserved. | Serving Kumaon Since 1990</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA BUTTONS -->
+    <div class="sticky-cta">
+        <a href="tel:9548877871" class="cta-button cta-phone" title="Call Us">☎️</a>
+        <a href="https://wa.me/919548877871?text=I%20need%20help%20with%20products" class="cta-button cta-whatsapp" target="_blank" title="Chat on WhatsApp">💬</a>
+    </div>
+
+</body>
+</html>
