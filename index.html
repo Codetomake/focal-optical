@@ -974,6 +974,231 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+		
+		
+		
+		
+		
+		
+		/* HERO */
+
+.hero{
+    position:relative;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    color:#fff;
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(0,40,85,.75),rgba(0,40,85,.75)),
+    url("images/hero.jpg") center/cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,#0057b8aa,#00b4ffaa);
+}
+
+.hero-content{
+    position:relative;
+    max-width:900px;
+    z-index:2;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(10px);
+    padding:10px 22px;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(2.8rem,6vw,4.8rem);
+    line-height:1.1;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:#FFD54F;
+}
+
+.hero-subtitle{
+    max-width:720px;
+    margin:auto;
+    font-size:1.2rem;
+    line-height:1.8;
+    opacity:.95;
+}
+
+
+/* FEATURES */
+
+.hero-features{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:18px;
+    margin:45px 0;
+}
+
+.feature-card{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    padding:18px;
+    border-radius:18px;
+
+    transition:.35s;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-6px);
+    background:rgba(255,255,255,.22);
+}
+
+.feature-card .icon{
+
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#FFD54F;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.feature-card h4{
+    margin:0;
+    font-size:18px;
+}
+
+.feature-card p{
+    margin:5px 0 0;
+    font-size:14px;
+    opacity:.85;
+}
+
+
+/* BUTTONS */
+
+.hero-cta{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.btn{
+
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+
+    background:#FFD54F;
+    color:#222;
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(255,213,79,.35);
+}
+
+.btn-whatsapp{
+
+    background:#25D366;
+    color:#fff;
+}
+
+.btn-whatsapp:hover{
+
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+
+    background:#fff;
+    color:#003366;
+}
+
+
+/* TRUST BAR */
+
+.trust-bar{
+
+    background:#fff;
+    padding:60px 20px;
+}
+
+.trust-grid{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.trust-item{
+
+    background:#fff;
+    border-radius:18px;
+    text-align:center;
+    padding:35px 20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.trust-item:hover{
+
+    transform:translateY(-8px);
+}
+
+.trust-item h2{
+
+    font-size:48px;
+    color:#0057b8;
+    margin-bottom:10px;
+}
+
+.trust-item p{
+
+    color:#666;
+    font-size:17px;
+}
     </style>
 </head>
 <body>
@@ -982,7 +1207,9 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <span class="logo-text"><span>Bombay</span><span>Opticians</span></span>
+    <!--             <span class="logo-text"><span>Bombay</span><span>Opticians</span></span>
+		-->		
+				<img src="images/logo.png" alt="Website Logo" width="150" height="30px">
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -998,61 +1225,118 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-badge">🏆 35+ Years of Trust</div>
-            <h1>Vision with Precision Since 1990</h1>
-            <p class="hero-subtitle">Serving Kumaon with trusted eye care, premium eyewear & advanced vision solutions for over 35 years</p>
-            
-            <div class="hero-features">
-                <div class="hero-feature">
-                    <div class="hero-feature-icon">✔️</div>
-                    <div class="hero-feature-text">20-Step Precision Eye Examination</div>
-                </div>
-                <div class="hero-feature">
-                    <div class="hero-feature-icon">✔️</div>
-                    <div class="hero-feature-text">Premium International Lens Brands</div>
-                </div>
-                <div class="hero-feature">
-                    <div class="hero-feature-icon">✔️</div>
-                    <div class="hero-feature-text">Latest Eyewear Collections</div>
-                </div>
-                <div class="hero-feature">
-                    <div class="hero-feature-icon">✔️</div>
-                    <div class="hero-feature-text">Contact Lens Specialists</div>
+
+	
+	<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-badge">
+            🏆 Trusted Since 1990 • 35+ Years of Excellence
+        </span>
+
+        <h1>
+            See Better.<br>
+            <span>Live Better.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Premium eye care, advanced vision testing, stylish eyewear and
+            international lens brands trusted by families across Kumaon.
+        </p>
+
+        <div class="hero-features">
+
+            <div class="feature-card">
+                <div class="icon">👁️</div>
+                <div>
+                    <h4>20-Step Eye Test</h4>
+                    <p>Accurate & Comprehensive</p>
                 </div>
             </div>
 
-            <div class="hero-cta">
-                <a href="tel:9548877871" class="btn btn-light">⭐ Book Eye Test</a>
-                <a href="https://wa.me/919548877871?text=Hello%2C%20I%20would%20like%20to%20place%20an%20order" class="btn btn-light" target="_blank">💬 Order on WhatsApp</a>
-                <a href="https://g.page/r/CXBZTz5n_YvbEBM/review" class="btn btn-light" target="_blank">⭐ Read Reviews</a>
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <div>
+                    <h4>International Lenses</h4>
+                    <p>Premium Quality Vision</p>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- TRUST BAR -->
-    <section class="trust-bar">
-        <div class="trust-grid">
-            <div class="trust-item">
-                <div class="trust-number">35+</div>
-                <div class="trust-label">Years of Trust</div>
+            <div class="feature-card">
+                <div class="icon">🕶️</div>
+                <div>
+                    <h4>Latest Eyewear</h4>
+                    <p>Modern Collections</p>
+                </div>
             </div>
-            <div class="trust-item">
-                <div class="trust-number">7</div>
-                <div class="trust-label">Family Owned Stores</div>
+
+            <div class="feature-card">
+                <div class="icon">💧</div>
+                <div>
+                    <h4>Contact Lens Experts</h4>
+                    <p>Professional Consultation</p>
+                </div>
             </div>
-            <div class="trust-item">
-                <div class="trust-number">1000s</div>
-                <div class="trust-label">Happy Customers</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">20</div>
-                <div class="trust-label">Step Eye Exam</div>
-            </div>
+
         </div>
-    </section>
+
+        <div class="hero-cta">
+
+            <a href="tel:9548877871" class="btn btn-primary">
+                📅 Book Eye Test
+            </a>
+
+            <a href="https://wa.me/919548877871?text=Hello%2C%20I%20would%20like%20to%20place%20an%20order"
+                class="btn btn-whatsapp" target="_blank">
+                💬 WhatsApp
+            </a>
+
+            <a href="https://g.page/r/CXBZTz5n_YvbEBM/review"
+                class="btn btn-outline" target="_blank">
+                ⭐ Reviews
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TRUST BAR ================= -->
+
+<section class="trust-bar">
+
+    <div class="trust-grid">
+
+        <div class="trust-item">
+            <h2>35+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="trust-item">
+            <h2>7</h2>
+            <p>Family-Owned Stores</p>
+        </div>
+
+        <div class="trust-item">
+            <h2>1000+</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="trust-item">
+            <h2>20</h2>
+            <p>Step Eye Examination</p>
+        </div>
+
+    </div>
+
+</section>
+
+
 
     <!-- GOOGLE REVIEWS -->
     <section class="reviews-section">
@@ -1464,7 +1748,7 @@
     <section class="areas-section">
         <div class="section-header">
             <h2 class="section-title">Areas We Serve Across Kumaon</h2>
-            <p class="section-subtitle">Trusted optical services across 7 store locations</p>
+            <p class="section-subtitle">Trusted optical services across 7 store location</p>
         </div>
 
         <div class="areas-grid">
@@ -1619,12 +1903,6 @@
                     <h4>Store Locations</h4>
                     <ul>
                         <li>Lalkuan</li>
-                        <li>Haldwani</li>
-                        <li>Almora</li>
-                        <li>Pithoragarh</li>
-                        <li>Didihat</li>
-                        <li>Bageshwar</li>
-                        <li>Dharchula</li>
                     </ul>
                 </div>
             </div>
